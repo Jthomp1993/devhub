@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 100%; 
         scroll-behaviour: smooth;
+        overscroll-behavior: none;
         
     }
     *,
