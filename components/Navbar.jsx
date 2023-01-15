@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 const StyledNavbar = styled.nav`
     position: fixed;
+    top: 0px;
+    right: 0px; 
+    left: 0px;
     display: flex;
     align-items: center;
     height: 100px;

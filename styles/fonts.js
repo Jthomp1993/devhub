@@ -21,6 +21,13 @@ const fonts = css`
         font-weight: 700;
         font-style: normal;
     }
+
+    @font-face {
+        font-family: 'Cabinet';
+        src: url('/fonts/CabinetGrotesk-Extrabold.woff') format('woff');
+        font-weight: 900;
+        font-style: normal;
+    }
     
 `
 

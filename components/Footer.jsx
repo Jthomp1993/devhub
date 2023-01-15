@@ -73,11 +73,12 @@ const StyledFooter = styled.footer`
                 flex-direction: column;
                 justify-content: start;
                 align-items: start;
+                width: 150px;
+                text-align: start;
 
                 h2 {
-                    padding-bottom: 5px;
+                    padding-bottom: 1rem;
                 }
-
             }
 
 
