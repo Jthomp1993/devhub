@@ -1,4 +1,7 @@
+import { useRef } from 'react';
+import useIsomorphicLayoutEffect from '@/utils/useIsomorphicLayoutEffect';
 import styled from "styled-components";
+import { gsap } from "gsap";
 
 const StyledCircles = styled.div`
 
@@ -60,12 +63,29 @@ const StyledCircles = styled.div`
 `;
 
 const Circles = () => {
+    const circleOne = useRef();
+    const circleTwo = useRef();
+    const circleThree = useRef();
+    const circleFour = useRef();
+
+    useIsomorphicLayoutEffect(() => {
+        gsap.set(circleOne.current, {scale: 0});
+        gsap.to(circleOne.current, {duration: 2.5, scale: 1, ease: 'elastic'});
+        gsap.set(circleTwo.current, {scale: 0});
+        gsap.to(circleTwo.current, {duration: 2.5, scale: 1, ease: 'elastic'});
+        gsap.set(circleThree.current, {scale: 0});
+        gsap.to(circleThree.current, {duration: 2.5, scale: 1, ease: 'elastic'});
+        gsap.set(circleFour.current, {scale: 0});
+        gsap.to(circleFour.current, {duration: 2.5, scale: 1, ease: 'elastic'});
+    }, []);
+
+
   return (
     <StyledCircles>
-        <div className="circle__one"></div>
-        <div className="circle__two"></div>
-        <div className="circle__three"></div>
-        <div className="circle__four"></div>
+        <div className="circle__one" ref={circleOne}></div>
+        <div className="circle__two" ref={circleTwo}></div>
+        <div className="circle__three" ref={circleThree}></div>
+        <div className="circle__four" ref={circleFour}></div>
     </StyledCircles>
   )
 }

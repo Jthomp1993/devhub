@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 const StyledNavbar = styled.nav`
-    position: sticky;
+    position: fixed;
     display: flex;
     align-items: center;
     height: 100px;
     width: 100%;
     margin: 0;
+    z-index: 9999;
+    mix-blend-mode: difference;
 
     padding: 0px 12px;
 
