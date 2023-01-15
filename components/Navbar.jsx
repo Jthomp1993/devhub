@@ -18,7 +18,7 @@ const StyledNavbar = styled.nav`
     }
 
     @media (min-width: 1024px) {
-
+        padding: 0px 40px;
     }
     
     h1 {

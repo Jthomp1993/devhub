@@ -6,6 +6,8 @@ const variables = css`
         --white: #FFFFFF;
         --red: #9D4539;
 
+        --max-width: 1600px;
+
         --cabinet: 'Cabinet', sans-serif;
         
     }

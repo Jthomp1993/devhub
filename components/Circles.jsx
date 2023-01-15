@@ -68,6 +68,7 @@ const Circles = () => {
     const circleThree = useRef();
     const circleFour = useRef();
 
+    // Gsap animations
     useIsomorphicLayoutEffect(() => {
         gsap.set(circleOne.current, {scale: 0});
         gsap.to(circleOne.current, {duration: 2.5, scale: 1, ease: 'elastic'});
