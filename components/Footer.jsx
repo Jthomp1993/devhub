@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
     text-align: center;
     background-color: var(--red);
     height: 100vh;
-    padding: 0px 12px;
+    padding: 0px 15px;
         
     @media (min-width: 768px) {
         padding: 0px 25px;

@@ -13,7 +13,7 @@ const StyledNavbar = styled.nav`
     z-index: 9999;
     mix-blend-mode: difference;
 
-    padding: 0px 12px;
+    padding: 0px 15px;
 
 
     @media (min-width: 768px) {
