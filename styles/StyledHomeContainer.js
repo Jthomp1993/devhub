@@ -4,6 +4,7 @@ const StyledHomeContainer = styled.div`
     height: 200vh;
     padding: 0px 15px;
     margin-top: 120px;
+    font-family: var(--cabinet);
         
     @media (min-width: 768px) {
         padding: 0px 25px;
@@ -33,7 +34,7 @@ const StyledHomeContainer = styled.div`
         }
 
         .search {
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
     }
 
@@ -79,6 +80,46 @@ const StyledHomeContainer = styled.div`
             border-bottom: 2px solid var(--white);
             outline: none;
             appearance: none;
+        }
+
+        .submit__btn {
+            padding: 1rem 4rem;
+            background-color: var(--dark);
+            color: var(--white);
+            float: right;
+            margin-top: 2rem;
+            font-size: 16px;
+            font-weight: 600;
+            border: 2px solid var(--white);
+            border-radius: 50px;
+            transition: .3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .submit__btn:hover {
+            background-color: var(--white);
+            color: var(--dark);
+        }
+
+        .error__msg {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0 0 0;
+            padding-left: 1rem;
+        }
+
+        .error__msg p {
+            margin: 0;
+            color: var(--red);
+            font-weight: 700;
+            font-size: 16px;
+            padding-left: 1rem;
+        }
+
+        .error__icon {
+            color: var(--red);
+            font-size: 26px;
+            
         }
     }
 `;

@@ -12,6 +12,7 @@ const StyledNavbar = styled.nav`
     margin: 0;
     z-index: 9999;
     mix-blend-mode: difference;
+    pointer-events: none;
 
     padding: 0px 15px;
 
