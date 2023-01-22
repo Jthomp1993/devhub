@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Lenis from '@studio-freight/lenis'
 import useIsomorphicLayoutEffect from '@/utils/useIsomorphicLayoutEffect';
+import { AppProvider } from '@/context/AppContext';
 
 
 export default function App({ Component, pageProps }) {
@@ -37,10 +38,12 @@ export default function App({ Component, pageProps }) {
     
   return (
     <>
+    <AppProvider>
     <GlobalStyle />
     <Navbar />
     <Component {...pageProps} />
     <Footer />
+    </AppProvider>
     </>
   ) 
 }

@@ -24,8 +24,20 @@ const StyledResults = styled.div`
         h2 {   
             font-weight: 900;
             font-size: clamp(20px, 5vw, 26px);
-            margin-bottom: 0;
+            margin-bottom: 4rem;
         }
+    }
+
+    .results__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .item {
+        width: 300px;
+        height: 300px;
+        background-color: white;
     }
 `;
 
