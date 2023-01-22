@@ -20,7 +20,7 @@ const StyledLoader = styled.div`
         }
     }
     
-    .spinner {
+.spinner {
    width: 57.6px;
    height: 57.6px;
    animation: spinner-y0fdc1 2s infinite ease;

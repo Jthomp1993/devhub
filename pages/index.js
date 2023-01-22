@@ -1,18 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { useRouter } from 'next/navigation';
 import Head from 'next/head';
 import StyledHomeContainer from '@/styles/StyledHomeContainer';
 import Circles from '@/components/Circles';
 import { languages, locations } from '@/config';
 import { RiCloseFill } from "react-icons/ri";
+import AppContext from '@/context/AppContext';
 
 
 export default function Home() {
-    const [formErr, setFormErr] = useState(false);
-    const [formData, setFormData] = useState({
-        name: '',
-        language: '',
-        location: ''
-    });
+    const { fetchData, formData, setFormData, formErr, setFormErr } = useContext(AppContext);
+
+    const router = useRouter();
 
     useEffect(() => {
         const input = document.querySelectorAll('.form__validation');
@@ -30,7 +29,6 @@ export default function Home() {
             ...prevState,
             [e.target.id]: e.target.value
         }));
-        console.log(formData);
     }
 
     const onSubmit = (e) => {
@@ -38,9 +36,10 @@ export default function Home() {
         if(formData.name === '' && formData.language === '' && formData.location === '') {
             setFormErr(true);
         } else {
-            console.log('Form submitted');
             setFormErr(false);
+            fetchData();
         }
+        router.push('/Results');
     }
     
   return (
@@ -63,7 +62,7 @@ export default function Home() {
         <div className="form__wrapper">
             <form onSubmit={onSubmit}>
                 <div className="form__select">
-                <input onChange={onChange} id="name" className='form__input form__validation' type="text" name="name" placeholder="NAME" />
+                <input onChange={onChange} id="name" value={formData.name} className='form__input form__validation' type="text" name="name" placeholder="NAME" />
                 <select onChange={onChange} id="language" name="language" className="dropdown__select form__validation">
                     <option value="language" selected hidden disabled>LANGAUGE</option>
                     {languages.map((lang, index) => (
