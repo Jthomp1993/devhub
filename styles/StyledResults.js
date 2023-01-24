@@ -3,9 +3,11 @@ import styled from 'styled-components';
 const StyledResults = styled.div`
     min-height: 100vh;
     padding: 0px 15px;
+    margin: auto;
     margin-top: 120px;
     font-family: var(--cabinet);
     margin-bottom: 10rem;
+    max-width: var(--max-width);
         
     @media (min-width: 768px) {
         padding: 0px 25px;

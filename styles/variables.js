@@ -7,7 +7,7 @@ const variables = css`
         --red: #9D4539;
         --grey: #383838;
 
-        --max-width: 1600px;
+        --max-width: 1880px;
 
         --cabinet: 'Cabinet', sans-serif;
         

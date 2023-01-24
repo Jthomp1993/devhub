@@ -38,15 +38,15 @@ const StyledResultsItem = styled.div.attrs({
             }
 
             .wrapper {
-                padding: 1rem;
+                padding: 1.5rem;
             }
 
             .circle {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 50px;
-                width: 50px;
+                height: 70px;
+                width: 70px;
                 border-radius: 50px;
                 background-color: var(--red);
                 float: right;
@@ -56,7 +56,7 @@ const StyledResultsItem = styled.div.attrs({
             }
 
             .icon {
-                font-size: 18px;
+                font-size: 24px;
             }
         }
     }
