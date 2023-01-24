@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledHomeContainer = styled.div`
-    height: 200vh;
+    height: 130vh;
     padding: 0px 15px;
     margin-top: 120px;
     font-family: var(--cabinet);
@@ -80,25 +80,6 @@ const StyledHomeContainer = styled.div`
             border-bottom: 2px solid var(--white);
             outline: none;
             appearance: none;
-        }
-
-        .submit__btn {
-            padding: 1rem 4rem;
-            background-color: var(--dark);
-            color: var(--white);
-            float: right;
-            margin-top: 2rem;
-            font-size: 16px;
-            font-weight: 600;
-            border: 2px solid var(--white);
-            border-radius: 50px;
-            transition: .3s ease-in-out;
-            cursor: pointer;
-        }
-
-        .submit__btn:hover {
-            background-color: var(--white);
-            color: var(--dark);
         }
 
         .error__msg {

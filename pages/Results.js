@@ -1,5 +1,6 @@
 import { useContext, useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import StyledResults from "@/styles/StyledResults";
 import Loader from "@/components/Loader";
 import ResultsItem from '@/components/ResultsItem';
@@ -10,7 +11,7 @@ const Results = () => {
     const { loading, results } = useContext(AppContext);
 
     useEffect(() => {
-        console.log(results);
+        
     }, [results]);
     
   return (
@@ -23,7 +24,7 @@ const Results = () => {
       </Head>
         {loading ? (
             <Loader />
-        ) : (
+        ) : (results.length > 0) ? (
             <>
                 <div className="results__heading">
                     <h2>Here are the results we could find based on your search.</h2>
@@ -34,6 +35,12 @@ const Results = () => {
                     ))}
                 </div>
             </>
+        ) : (
+            <div className="results__heading">
+                <h1 style={{ marginBottom: '4rem'}}>Sorry we couldn't find any developers based on your search.</h1>
+                <Link className='pill__btn' href='/'>Go Back</Link>
+            </div>
+            
         )}
     
     </StyledResults>

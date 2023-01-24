@@ -39,6 +39,25 @@ const GlobalStyle = createGlobalStyle`
     }
     
     :root {
+
+        .pill__btn {
+            padding: 1rem 4rem;
+            background-color: var(--dark);
+            color: var(--white);
+            margin-top: 2rem;
+            font-size: 16px;
+            font-weight: 600;
+            border: 2px solid var(--white);
+            border-radius: 50px;
+            transition: .3s ease-in-out;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .pill__btn:hover {
+            background-color: var(--white);
+            color: var(--dark);
+        }
         
     }   
 `;

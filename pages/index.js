@@ -81,7 +81,7 @@ export default function Home() {
                         <RiCloseFill className="error__icon" /><p>Please fill out at least one of the options above to begin your search.</p>
                     </div>
                 )}
-                <button type='submit' className='submit__btn'>Go</button>
+                <button type='submit' className='pill__btn' style={{ float: 'right'}}>Go</button>
             </form>
         </div>
       </StyledHomeContainer>

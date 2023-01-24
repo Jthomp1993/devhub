@@ -18,7 +18,7 @@ const StyledResultsItem = styled.div.attrs({
     }
 
     .overlay {
-        background-color: rgba(23,16,16,0.6);
+        background-color: rgba(23,16,16,0.5);
         position: absolute;
         top: 0;
         right: 0;
@@ -72,9 +72,7 @@ const StyledResultsItem = styled.div.attrs({
 `;
 
 const ResultsItem = ({ result }) => {
-    useEffect(() => {
-        console.log(result);
-    },[]);
+
   return (
     <StyledResultsItem style={{ backgroundImage: `url(${result.avatar_url})`}}>
         <div className="overlay">
