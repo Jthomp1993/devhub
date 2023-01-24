@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 const StyledNavbar = styled.nav`
     position: fixed;
@@ -12,7 +13,11 @@ const StyledNavbar = styled.nav`
     margin: 0;
     z-index: 9999;
     mix-blend-mode: difference;
-    pointer-events: none;
+
+    .nav__link {
+        text-decoration: none;
+    }
+    
 
     padding: 0px 15px;
 
@@ -36,7 +41,9 @@ const StyledNavbar = styled.nav`
 const Navbar = () => {
   return (
     <StyledNavbar>
-        <h1>DevHub.</h1>
+        <Link className="nav__link" href='/'>
+            <h1>DevHub.</h1>
+        </Link>
     </StyledNavbar>
   )
 }
