@@ -38,8 +38,8 @@ export default function Home() {
         } else {
             setFormErr(false);
             fetchData();
+            router.push('/Results');
         }
-        router.push('/Results');
     }
     
   return (

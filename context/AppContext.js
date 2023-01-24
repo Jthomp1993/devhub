@@ -3,7 +3,7 @@ import { createContext, useState } from 'react';
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [formErr, setFormErr] = useState(false);
     const [results, setResults] = useState([]);
     const [formData, setFormData] = useState({

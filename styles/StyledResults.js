@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 const StyledResults = styled.div`
-    height: 150vh;
+    min-height: 100vh;
     padding: 0px 15px;
     margin-top: 120px;
     font-family: var(--cabinet);
+    margin-bottom: 10rem;
         
     @media (min-width: 768px) {
         padding: 0px 25px;
@@ -30,14 +31,28 @@ const StyledResults = styled.div`
 
     .results__grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1fr;
         gap: 2rem;
+        width: 100%;
+        margin: auto;
     }
 
-    .item {
-        width: 300px;
-        height: 300px;
-        background-color: white;
+    @media (min-width: 590px) {
+        .results__grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1020px) {
+        .results__grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .results__grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 `;
 
