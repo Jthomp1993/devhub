@@ -40,6 +40,11 @@ export default function Home() {
             fetchData();
             router.push('/Results');
         }
+        setFormData({
+            name: '',
+            language: '',
+            location: ''
+        })
     }
     
   return (
