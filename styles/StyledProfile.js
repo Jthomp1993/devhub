@@ -21,6 +21,7 @@ const StyledProfile = styled.section`
         grid-template-columns: 1fr;
         gap: 2rem;
         max-width: 1020px;
+        margin-bottom: 2rem;
 
         @media (min-width: 680px) {
             grid-template-columns: 1fr 2fr;
@@ -111,6 +112,28 @@ const StyledProfile = styled.section`
                 }
             }
         }
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+
+        .info__item {
+
+            p {
+                font-size: 14px;
+                color: var(--light-grey);
+                margin-bottom: 0px;
+            }
+            
+            h5 {
+                color: var(--white);
+                font-size: 20px;
+                font-weight: 200;
+                margin: 0;
+            }
+        }
+
     }
 
 `;

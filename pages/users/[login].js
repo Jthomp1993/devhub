@@ -47,6 +47,27 @@ const Profile = ({ user }) => {
                 </div>
             </div>
         </div>
+
+        <div className="info">
+            {user.blog && (
+                <div className="info__item">
+                    <p>Website</p>
+                    <h5>{user.blog}</h5>
+                </div>
+            )}
+            {user.twitter_username && (
+                <div className="info__item">
+                    <p>Twitter</p>
+                    <h5>{user.twitter_username}</h5>
+                </div>
+            )}
+            {user.company && (
+                <div className="info__item">
+                    <p>Company</p>
+                    <h5>{user.company}</h5>
+                </div>
+            )}
+        </div>
     </StyledProfile>
   )
 }

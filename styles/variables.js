@@ -6,6 +6,7 @@ const variables = css`
         --white: #FFFFFF;
         --red: #9D4539;
         --grey: #383838;
+        --light-grey: #6D6D6D;
 
         --max-width: 1880px;
 
