@@ -35,25 +35,28 @@ const StyledResults = styled.div`
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
-        width: 100%;
+        width: 70%;
         margin: auto;
     }
 
     @media (min-width: 590px) {
         .results__grid {
             grid-template-columns: repeat(2, 1fr);
+            width: 100%;
         }
     }
 
     @media (min-width: 1020px) {
         .results__grid {
             grid-template-columns: repeat(3, 1fr);
+            width: 100%;
         }
     }
 
     @media (min-width: 1400px) {
         .results__grid {
             grid-template-columns: repeat(4, 1fr);
+            width: 100%;
         }
     }
 `;

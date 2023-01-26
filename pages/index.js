@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import { useRouter } from 'next/navigation';
 import Head from 'next/head';
 import StyledHomeContainer from '@/styles/StyledHomeContainer';
@@ -9,7 +9,7 @@ import AppContext from '@/context/AppContext';
 
 
 export default function Home() {
-    const { fetchData, formData, setFormData, formErr, setFormErr } = useContext(AppContext);
+    const { fetchData, formData, setFormData, formErr, setFormErr, setResults, setLoading } = useContext(AppContext);
 
     const router = useRouter();
 
@@ -23,6 +23,12 @@ export default function Home() {
             }
         })
     }, [formErr]);
+
+    // Refresh results data and loading state
+    useEffect(() => {
+        setResults([]);
+        setLoading(true);
+    }, []);
 
     const onChange = (e) => {
         setFormData((prevState) => ({

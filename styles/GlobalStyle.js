@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
         overflow-y: overlay;
         width: 100%;
         height: 100%; 
-        scroll-behaviour: smooth;
+        scroll-behaviour: initial;
         overscroll-behavior: none;
         
     }

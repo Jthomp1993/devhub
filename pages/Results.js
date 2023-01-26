@@ -24,7 +24,12 @@ const Results = () => {
       </Head>
         {loading ? (
             <Loader />
-        ) : (results.length > 0) ? (
+        ) : (results.length < 1) ? (
+            <div className="results__heading">
+                <h1 style={{ marginBottom: '4rem'}}>Sorry we couldn't find any developers based on your search.</h1>
+                <Link className='pill__btn' href='/'>Go Back</Link>
+            </div>
+        ) : (
             <>
                 <div className="results__heading">
                     <h2>Here are the results we could find based on your search.</h2>
@@ -35,11 +40,6 @@ const Results = () => {
                     ))}
                 </div>
             </>
-        ) : (
-            <div className="results__heading">
-                <h1 style={{ marginBottom: '4rem'}}>Sorry we couldn't find any developers based on your search.</h1>
-                <Link className='pill__btn' href='/'>Go Back</Link>
-            </div>
             
         )}
     

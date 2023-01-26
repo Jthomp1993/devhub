@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 import { RxArrowUp } from "react-icons/rx";
 
 const StyledResultsItem = styled.div.attrs({
@@ -24,7 +24,10 @@ const StyledResultsItem = styled.div.attrs({
         right: 0;
         bottom: 0;
         left: 0;
-        transition: .3s ease-out;
+        transition: .3s ease-in-out;
+        white-space: nowrap;
+        overflow: hidden;
+        text-decoration: none;
 
         .flex__wrapper {
             height: 100%;
@@ -50,7 +53,8 @@ const StyledResultsItem = styled.div.attrs({
                 border-radius: 50px;
                 background-color: var(--red);
                 float: right;
-                transition: transform .3s ease-out;
+                transition: transform .3s ease-in-out;
+                transform: translateY(-10px);
                 opacity: 0;
                 color: var(--white);
             }
@@ -75,7 +79,7 @@ const ResultsItem = ({ result }) => {
 
   return (
     <StyledResultsItem style={{ backgroundImage: `url(${result.avatar_url})`}}>
-        <div className="overlay">
+        <Link href={`/users/${result.login}`} className="overlay">
             <div className="flex__wrapper">
                 <div className="wrapper">
                     <div className="circle">
@@ -84,7 +88,7 @@ const ResultsItem = ({ result }) => {
                 </div>
                 <h2>{result.login}</h2>
             </div>
-        </div>
+        </Link>
     </StyledResultsItem>
   )
 }
