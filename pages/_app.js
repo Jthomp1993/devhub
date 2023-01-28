@@ -38,6 +38,7 @@ export default function App({ Component, pageProps }) {
     
   return (
     <>
+    <div className="block"></div>
     <AppProvider>
     <GlobalStyle />
     <Navbar />

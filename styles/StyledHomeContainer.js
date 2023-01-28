@@ -23,7 +23,7 @@ const StyledHomeContainer = styled.div`
         h2 {   
             font-weight: 900;
             font-size: clamp(24px, 5vw, 48px);
-            margin-bottom: 0;
+            margin: 0;
         }
 
         p {

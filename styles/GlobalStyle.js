@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
         position: relative;
         margin: 0;
         padding: 0;
-        padding-top: 120px;
+        
         width: 100%;
         max-width: 100%;
         min-height: 100%;
@@ -58,6 +58,10 @@ const GlobalStyle = createGlobalStyle`
         .pill__btn:hover {
             background-color: var(--white);
             color: var(--dark);
+        }
+
+        .block {
+            height: 100px;
         }
         
     }   

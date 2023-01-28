@@ -81,12 +81,7 @@ export default function Home() {
                         <option key={index} value={lang.name.toLowerCase()}>{lang.name}</option>
                     ))}
                 </select>
-                <select onChange={onChange} id="location" name="location" className="dropdown__select form__validation">
-                    <option value="location" selected disabled hidden>LOCATION</option>
-                    {locations.map((location, index) => (
-                        <option key={index} value={location.name.toLowerCase()}>{location.name}</option>
-                    ))}
-                </select>
+                <input onChange={onChange} id="location" value={formData.location} className='form__input form__validation' type="text" name="location" placeholder="LOCATION" />
                 </div>
                 {formErr && (
                     <div className="error__msg">
