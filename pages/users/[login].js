@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import StyledProfile from "@/styles/StyledProfile";
 import ScrollUp from "@/utils/scrollUp";
 import RepoItem from "@/components/RepoItem";
+import Link from 'next/link';
 
 export const getServerSideProps = async (context) => {
     const login = context.params.login;
@@ -23,6 +24,9 @@ const Profile = ({ user, repos }) => {
     <>
     <ScrollUp />
     <StyledProfile>
+        <div className="back__link">
+            <Link href='/Results'>Back to results</Link>
+        </div>
         <div className="profile__header">
             <div style={{ backgroundImage: `url(${user.avatar_url})`}} className="profile__img"></div>
             <div className="profile__info">

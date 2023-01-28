@@ -17,12 +17,21 @@ const StyledProfile = styled.section`
         padding: 0px 80px;
     }
 
+    .back__link {
+        margin-bottom: 2rem;
+         
+        a {
+            color: var(--white);
+            font-size: 18px;
+        }
+    }
+
     .profile__header {
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
         max-width: 1020px;
-        margin-bottom: 2rem;
+        margin-bottom: 2rem 0;
 
         @media (min-width: 680px) {
             grid-template-columns: 1fr 2fr;
