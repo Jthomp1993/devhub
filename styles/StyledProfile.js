@@ -5,6 +5,7 @@ const StyledProfile = styled.section`
     min-height: 100vh;
     padding: 0px 15px;
     max-width: var(--max-width);
+    margin: auto;
     font-family: var(--cabinet);
     margin-bottom: 10rem;
 
@@ -13,7 +14,7 @@ const StyledProfile = styled.section`
     }
 
     @media (min-width: 1024px) {
-        padding: 0px 40px;
+        padding: 0px 80px;
     }
 
     .profile__header {
@@ -117,6 +118,7 @@ const StyledProfile = styled.section`
     .info {
         display: flex;
         flex-direction: column;
+        margin-bottom: 2rem;
 
         .info__item {
 
@@ -133,6 +135,45 @@ const StyledProfile = styled.section`
                 margin: 0;
             }
         }
+
+    }
+
+    .mobile__stats {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 921px) {
+            display: none;
+        }
+
+        .mobile__stat {
+            display: flex;
+
+            h5 {
+                font-size: 24px;
+                color: var(--white);
+                margin: 5px 0;
+            }
+
+            .user__stat {
+                color: var(--red);
+                margin-left: 5px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .repos {
+        margin-top: 4rem;
+
+        .repos__heading {
+            
+            h2 {
+                font-size: 48px;
+                color: var(--white);
+                margin: 1rem 0;
+            }
+    }
 
     }
 

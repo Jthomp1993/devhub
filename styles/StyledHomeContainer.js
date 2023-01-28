@@ -3,7 +3,6 @@ import styled from "styled-components";
 const StyledHomeContainer = styled.div`
     height: 130vh;
     padding: 0px 15px;
-    margin-top: 120px;
     font-family: var(--cabinet);
         
     @media (min-width: 768px) {

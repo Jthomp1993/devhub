@@ -1,4 +1,4 @@
-import GlobalStyle from '@/styles/GlobalStyle'
+import GlobalStyle from '@/styles/GlobalStyle';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Lenis from '@studio-freight/lenis'

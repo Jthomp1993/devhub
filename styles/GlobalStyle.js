@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
         position: relative;
         margin: 0;
         padding: 0;
+        padding-top: 120px;
         width: 100%;
         max-width: 100%;
         min-height: 100%;

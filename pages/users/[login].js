@@ -1,18 +1,27 @@
-
+import { useEffect } from "react";
 import StyledProfile from "@/styles/StyledProfile";
+import ScrollUp from "@/utils/scrollUp";
+import RepoItem from "@/components/RepoItem";
 
 export const getServerSideProps = async (context) => {
     const login = context.params.login;
     const res = await fetch(`https://api.github.com/users/${login}`);
     const data = await res.json();
+    const repos = await fetch(`https://api.github.com/users/${login}/repos`);
+    const repoData = await repos.json();
     return {
-        props: { user: data }
+        props: { user: data, repos: repoData }
     }
 }
 
-const Profile = ({ user }) => {
- 
+const Profile = ({ user, repos }) => {
+    useEffect(() => {
+        console.log(repos.length);
+    }, []);
+
   return (
+    <>
+    <ScrollUp />
     <StyledProfile>
         <div className="profile__header">
             <div style={{ backgroundImage: `url(${user.avatar_url})`}} className="profile__img"></div>
@@ -48,6 +57,25 @@ const Profile = ({ user }) => {
             </div>
         </div>
 
+        <div className="mobile__stats">
+            <div className="mobile__stat">
+                <h5>Followers -</h5>
+                <h5 className="user__stat">{user.followers}</h5>
+            </div>
+            <div className="mobile__stat">
+                <h5>Following -</h5>
+                <h5 className="user__stat">{user.following}</h5>
+            </div>
+            <div className="mobile__stat">
+                <h5>Repos -</h5>
+                <h5 className="user__stat">{user.public_repos}</h5>
+            </div>
+            <div className="mobile__stat">
+                <h5>Gists -</h5>
+                <h5 className="user__stat">{user.public_gists}</h5>
+            </div>
+        </div>
+
         <div className="info">
             {user.blog && (
                 <div className="info__item">
@@ -68,7 +96,18 @@ const Profile = ({ user }) => {
                 </div>
             )}
         </div>
+
+        <div className="repos">
+            <div className="repos__heading">
+                <h2>Repositories</h2>
+            </div>
+            {repos.map((repo, index) => (
+                <RepoItem key={index} repo={repo}  />
+            ))}
+            
+        </div>
     </StyledProfile>
+    </>
   )
 }
 

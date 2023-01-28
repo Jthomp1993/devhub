@@ -30,6 +30,7 @@ export default function Home() {
         setLoading(true);
     }, []);
 
+    // Get values from form
     const onChange = (e) => {
         setFormData((prevState) => ({
             ...prevState,
