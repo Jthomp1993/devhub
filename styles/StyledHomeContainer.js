@@ -46,6 +46,10 @@ const StyledHomeContainer = styled.div`
             -webkit-text-fill-color: white !important;
         }
 
+        .form__select {
+            position: relative;
+        }
+
         .form__input {
             width: 100%;
             height: 80px;
@@ -100,6 +104,25 @@ const StyledHomeContainer = styled.div`
             color: var(--red);
             font-size: 26px;
             
+        }
+
+        .arrow {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 4rem;
+            pointer-events: none;
+
+            svg {
+                font-size: 22px;
+                color: var(--white);
+
+            }
         }
     }
 `;

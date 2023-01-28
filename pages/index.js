@@ -5,6 +5,7 @@ import StyledHomeContainer from '@/styles/StyledHomeContainer';
 import Circles from '@/components/Circles';
 import { languages, locations } from '@/config';
 import { RiCloseFill } from "react-icons/ri";
+import { IoIosArrowDown } from "react-icons/io";
 import AppContext from '@/context/AppContext';
 
 
@@ -73,16 +74,20 @@ export default function Home() {
         </div>
         <div className="form__wrapper">
             <form onSubmit={onSubmit}>
-                <div className="form__select">
                 <input onChange={onChange} id="name" value={formData.name} className='form__input form__validation' type="text" name="name" placeholder="NAME" />
+                <div className="form__select">
                 <select onChange={onChange} id="language" name="language" className="dropdown__select form__validation">
                     <option value="language" selected hidden disabled>LANGAUGE</option>
                     {languages.map((lang, index) => (
                         <option key={index} value={lang.name.toLowerCase()}>{lang.name}</option>
                     ))}
                 </select>
-                <input onChange={onChange} id="location" value={formData.location} className='form__input form__validation' type="text" name="location" placeholder="LOCATION" />
+                <span className='arrow'>
+                    <IoIosArrowDown />
+                </span>
                 </div>
+                <input onChange={onChange} id="location" value={formData.location} className='form__input form__validation' type="text" name="location" placeholder="LOCATION" />
+                
                 {formErr && (
                     <div className="error__msg">
                         <RiCloseFill className="error__icon" /><p>Please fill out at least one of the options above to begin your search.</p>
