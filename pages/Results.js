@@ -27,7 +27,7 @@ const Results = () => {
             <Loader />
         ) : (results.length < 1) ? (
             <div className="results__heading">
-                <h1 style={{ marginBottom: '4rem'}}>Sorry we couldn't find any developers based on your search.</h1>
+                <h1 style={{ marginBottom: '4rem'}}>Sorry we couldn&apos;t find any developers based on your search.</h1>
                 <Link className='pill__btn' href='/'>Go Back</Link>
             </div>
         ) : (
