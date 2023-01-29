@@ -68,7 +68,7 @@ export default function Home() {
         <Circles />
         <div className="heading">
             <h2>SOURCE DEVELOPERS FROM ACROSS THE GLOBE.</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>DevHub allows you to find developers from across the globe depending on their name, programming language and location.</p>
 
             <p className='search'><strong>Please fill in at least one of the options below to begin your search.</strong></p>
         </div>
@@ -77,7 +77,7 @@ export default function Home() {
                 <input onChange={onChange} id="name" value={formData.name} className='form__input form__validation' type="text" name="name" placeholder="NAME" />
                 <div className="form__select">
                 <select onChange={onChange} id="language" name="language" className="dropdown__select form__validation">
-                    <option value="language" selected hidden disabled>LANGAUGE</option>
+                    <option defaultValue="language" selected hidden disabled>LANGAUGE</option>
                     {languages.map((lang, index) => (
                         <option key={index} value={lang.name.toLowerCase()}>{lang.name}</option>
                     ))}
