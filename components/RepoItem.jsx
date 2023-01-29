@@ -47,8 +47,8 @@ const StyledRepoItem = styled.div`
         transform-origin: 50% 0;
         -webkit-transition-property: transform;
         transition-property: transform;
-        -webkit-transition-duration: 0.5s;
-        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out;
     }
