@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
             <meta name="image" content="/og.png" />
             <meta property="og:title" content="DevHub." />
             <meta property="og:description" content="A web app for networking with developers across the globe." />
-            <meta property="og:image" content="og.png" />
+            <meta property="og:image" content="/og.png" />
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:image" content="/og.png" />
