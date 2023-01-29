@@ -1,6 +1,8 @@
 import StyledProfile from "@/styles/StyledProfile";
 import RepoItem from "@/components/RepoItem";
 import Link from 'next/link';
+import Head from 'next/head';
+
 
 export const getServerSideProps = async (context) => {
     const login = context.params.login;
@@ -17,6 +19,12 @@ const Profile = ({ user, repos }) => {
 
   return (
     <>
+    <Head>
+        <title>DevHub - {user.login}</title>
+        <meta name="description" content="DevHub is a web app which enables users to source developers across the globe." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
     <StyledProfile>
         <div className="block"></div>
         <div className="back__link">
