@@ -25,11 +25,13 @@ export default function Home() {
         })
     }, [formErr]);
 
+
     // Refresh results data and loading state
     useEffect(() => {
         setResults([]);
         setLoading(true);
-    }, []);
+    }, [setResults, setLoading]);
+
 
     // Get values from form
     const onChange = (e) => {
