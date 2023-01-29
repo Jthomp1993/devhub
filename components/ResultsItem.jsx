@@ -79,7 +79,7 @@ const ResultsItem = ({ result }) => {
 
   return (
     <StyledResultsItem style={{ backgroundImage: `url(${result.avatar_url})`}}>
-        <Link href={`/users/${result.login}`} className="overlay">
+        <Link href={`/users/${result.login}`} className="overlay lenis_target">
             <div className="flex__wrapper">
                 <div className="wrapper">
                     <div className="circle">

@@ -9,26 +9,27 @@ const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
         overflow-x: hidden;
-        overflow-y: overlay;
-        width: 100%;
-        height: 100%; 
-        scroll-behaviour: initial;
-        overscroll-behavior: none;
-        
+        overflow-y: overlay; 
+        scroll-behaviour: smooth; 
     }
     *,
     *:before,
     *:after {
         box-sizing: inherit;
     }
+
+    html, body{
+        width: 100%;
+        overscroll-behavior: none;
+        min-height: 100%;
+        /*   height: 100%; */
+    }
+
     body {
         position: relative;
         margin: 0;
         padding: 0;
-        
-        width: 100%;
-        max-width: 100%;
-        min-height: 100%;
+        height: 100%;
         background-color: var(--dark);
         overflow-x: hidden;
         overflow-y: overlay;

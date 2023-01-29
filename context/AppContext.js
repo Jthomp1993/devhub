@@ -4,6 +4,7 @@ const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
+    const [smooth, setSmooth] = useState(true);
     const [formErr, setFormErr] = useState(false);
     const [results, setResults] = useState([]);
     const [formData, setFormData] = useState({
@@ -41,6 +42,8 @@ export const AppProvider = ({ children }) => {
         setResults,
         formErr,
         setFormErr,
+        smooth,
+        setSmooth,
 
         fetchData
     }}>

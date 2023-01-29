@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import StyledProfile from "@/styles/StyledProfile";
-import ScrollUp from "@/utils/scrollUp";
 import RepoItem from "@/components/RepoItem";
 import Link from 'next/link';
 
@@ -16,14 +14,11 @@ export const getServerSideProps = async (context) => {
 }
 
 const Profile = ({ user, repos }) => {
-    useEffect(() => {
-        console.log(repos.length);
-    }, []);
 
   return (
     <>
-    <ScrollUp />
     <StyledProfile>
+        <div className="block"></div>
         <div className="back__link">
             <Link href='/Results'>Back to results</Link>
         </div>
