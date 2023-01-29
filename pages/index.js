@@ -36,6 +36,7 @@ export default function Home() {
         setFormData((prevState) => ({
             ...prevState,
             [e.target.id]: e.target.value
+            
         }));
     }
 
@@ -75,16 +76,16 @@ export default function Home() {
         <div className="form__wrapper">
             <form onSubmit={onSubmit}>
                 <input onChange={onChange} id="name" value={formData.name} className='form__input form__validation' type="text" name="name" placeholder="NAME" />
-                <div className="form__select">
-                <select onChange={onChange} value="Language" id="language" className="dropdown__select form__validation">
-                    <option value="Language" disabled="disabled" hidden>LANGAUGE</option>
-                    {languages.map((lang, index) => (
-                        <option key={index} value={lang.name.toLowerCase()}>{lang.name}</option>
-                    ))}
-                </select>
-                <span className='arrow'>
-                    <IoIosArrowDown />
-                </span>
+                <div className="form__select"> 
+                    <select onChange={onChange} value={formData.language} id="language" className="dropdown__select form__validation">
+                        <option value="" disabled="disabled">LANGAUGE</option>
+                        {languages.map((lang, index) => (
+                            <option key={index} value={lang.name.toLowerCase()}>{lang.name}</option>
+                        ))}
+                    </select>
+                    <span className='arrow'>
+                        <IoIosArrowDown />
+                    </span>
                 </div>
                 <input onChange={onChange} id="location" value={formData.location} className='form__input form__validation' type="text" name="location" placeholder="LOCATION" />
                 
