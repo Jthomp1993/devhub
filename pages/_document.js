@@ -1,4 +1,4 @@
-import Document from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
@@ -26,5 +26,27 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal()
     }
+  }
+  render() {
+    return (
+      <Html>
+        <Head> 
+            <meta name="image" content="%PUBLIC_URL%/og.png" />
+            <meta property="og:title" content="DevHub." />
+            <meta property="og:description" content="A web app for networking with developers across the globe." />
+            <meta property="og:image" content="%PUBLIC_URL%/og.png" />
+
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:image" content="%PUBLIC_URL%/og.png" />
+            <meta name="twitter:creator" content="@joshua_thompson" />
+            <meta name="twitter:title" content="DevHub." />
+            <meta name="twitter:description" content="A web app for networking with developers across the globe." />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
   }
 }
