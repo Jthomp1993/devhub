@@ -49,11 +49,14 @@ export default function Home() {
             fetchData();
             router.push('/Results');
         }
-        setFormData({
-            name: '',
-            language: '',
-            location: ''
-        })
+        setTimeout(() => {
+            setFormData({
+                name: '',
+                language: '',
+                location: ''
+            })
+
+        }, 1000)
     }
     
   return (
