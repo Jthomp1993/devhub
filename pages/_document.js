@@ -31,13 +31,13 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head> 
-            <meta name="image" content="%PUBLIC_URL%/og.png" />
+            <meta name="image" content="/og.png" />
             <meta property="og:title" content="DevHub." />
             <meta property="og:description" content="A web app for networking with developers across the globe." />
-            <meta property="og:image" content="%PUBLIC_URL%/og.png" />
+            <meta property="og:image" content="og.png" />
 
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:image" content="%PUBLIC_URL%/og.png" />
+            <meta name="twitter:image" content="/og.png" />
             <meta name="twitter:creator" content="@joshua_thompson" />
             <meta name="twitter:title" content="DevHub." />
             <meta name="twitter:description" content="A web app for networking with developers across the globe." />
