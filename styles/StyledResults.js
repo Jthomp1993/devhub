@@ -13,7 +13,7 @@ const StyledResults = styled.div`
     }
 
     @media (min-width: 1024px) {
-        padding: 0px 40px;
+        padding: 0px 80px;
     }
 
     .results__heading {
