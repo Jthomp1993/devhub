@@ -76,8 +76,8 @@ export default function Home() {
             <form onSubmit={onSubmit}>
                 <input onChange={onChange} id="name" value={formData.name} className='form__input form__validation' type="text" name="name" placeholder="NAME" />
                 <div className="form__select">
-                <select onChange={onChange} id="language" name="language" className="dropdown__select form__validation">
-                    <option defaultValue="language" selected hidden disabled>LANGAUGE</option>
+                <select onChange={onChange} value="Language" id="language" className="dropdown__select form__validation">
+                    <option value="Language" disabled="disabled" hidden>LANGAUGE</option>
                     {languages.map((lang, index) => (
                         <option key={index} value={lang.name.toLowerCase()}>{lang.name}</option>
                     ))}
