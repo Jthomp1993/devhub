@@ -4,7 +4,7 @@
 
 ---
 
-![Readme image](/readme.png)
+![Readme image](/public/readme.png)
 
 <p>DevHub is a Nexjs application that allows users to search for developers accross the globe using the GitHub API. Users are able to search for developers depending on their name, programming language and location.</p>
 
