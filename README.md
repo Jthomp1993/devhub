@@ -1,4 +1,4 @@
-# A web application to network with developers across the globe built with Nextjs.
+# A web application for networking with developers across the globe built with Nextjs.
 
 [View the deployed project here.](https://devhub-mu.vercel.app/)
 
